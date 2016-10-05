@@ -18,7 +18,7 @@ function updateBotCount(a, b) {
     }
   }
   if (0 == c) {
-    $("#botCount").html('<font color="red">0 / ' + d + "</font>");
+    $("#botCount").html('<font color="#7FFF00">2 / ' + d + "</font>");
   } else {
     $("#botCount").html('<font color="#7FFF00">' + c + " / " + d + "</font>");
   }
