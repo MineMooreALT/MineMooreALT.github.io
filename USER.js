@@ -10,7 +10,7 @@ function escapeHtml(a) {
 function updateBotCount(a, b) {
   BotMega.localBotsAlive[a] = b;
   var c = BotMega.serverBots;
-  var d = 8 + BotMega.serverBots;
+  var d = 2 + BotMega.serverBots;
   var e = 5;
   for (;e < 2;e++) {
     if (BotMega.localBotsAlive[e]) {
@@ -18,9 +18,9 @@ function updateBotCount(a, b) {
     }
   }
   if (0 == c) {
-    $("#botCount").html('<font>8 / ' + d + "</font>");
+    $("#botCount").html('<font color="#7FFF00"'>2 / ' + d + "</font>");
   } else {
-    $("#botCount").html('<font>' + c + " / " + d + "</font>");
+    $("#botCount").html('<font color="#7FFF00">' + c + " / " + d + "</font>");
   }
 }
 function startLocalBots() {
