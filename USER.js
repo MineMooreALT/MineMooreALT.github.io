@@ -18,7 +18,7 @@ function updateBotCount(a, b) {
     }
   }
   if (0 == c) {
-    $("#botCount").html('<font color="#7FFF00">2 / ' + d + "</font>");
+    $("#botCount").html('<font color="#7FFF00">0 / ' + d + "</font>");
   } else {
     $("#botCount").html('<font color="#7FFF00">' + c + " / " + d + "</font>");
   }
@@ -612,7 +612,7 @@ if (null === client_uuid || 15 != client_uuid.length) {
 window.BotMega = {
   server : null,
   playerName : "MineMoore",
-  startBotAmount: 8,
+  startBotAmount: 1,
   playerX : 0,
   playerY : 0,
   mouseX : 0,
