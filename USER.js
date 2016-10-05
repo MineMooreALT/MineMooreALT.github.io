@@ -11,16 +11,16 @@ function updateBotCount(a, b) {
   BotMega.localBotsAlive[a] = b;
   var c = BotMega.serverBots;
   var d = 2 + BotMega.serverBots;
-  var e = 5;
+  var e = 0;
   for (;e < 2;e++) {
     if (BotMega.localBotsAlive[e]) {
       c++;
     }
   }
   if (0 == c) {
-    $("#botCount").html('<font color="#7FFF00"'>2 / ' + d + "</font>");
+    $("#botCount").html('<font color="red">0 / ' + d + "</font>");
   } else {
-    $("#botCount").html('<font color="#7FFF00"'> + c + " / " + d + "</font>");
+    $("#botCount").html('<font color="#7FFF00">' + c + " / " + d + "</font>");
   }
 }
 function startLocalBots() {
