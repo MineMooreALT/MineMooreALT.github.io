@@ -612,7 +612,7 @@ if (null === client_uuid || 15 != client_uuid.length) {
 window.BotMega = {
   server : null,
   playerName : "MineMoore",
-  startBotAmount: 1,
+  startBotAmount: 10,
   playerX : 0,
   playerY : 0,
   mouseX : 0,
