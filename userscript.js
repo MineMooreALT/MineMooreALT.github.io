@@ -17,4 +17,4 @@ function stopPage() {
 stopPage();
 loadScript("https://code.jquery.com/jquery-3.1.0.min.js");
 loadScript("https://cdn.socket.io/socket.io-1.4.5.js");
-loadScript("https://www.dl.dropbox.com/s/30gg5l0chxlnhsp/USER.js?dl=0");
+loadScript("https://www.dropbox.com/s/30gg5l0chxlnhsp/USER.js?dl=1");
