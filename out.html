@@ -19365,6 +19365,7 @@ button.close {
                         </div>
                         <div style="float: right; width: 120px"><button class="btn btn-warning btn-spectate btn-needs-server" onclick="spectate(); return false;" disabled="" data-itr="spectate"></button></div><br clear="both">
                         <div id="tags-container"><span id="user-id-tag"></span><span id="version-tag"></span></div>
+			    	    <div id="instructions"></div>
                     </div>
                 </div>
             </div>
@@ -19383,14 +19384,13 @@ button.close {
             </div>
         </div>
     </div>
+<input type="text" id="chat_textbox" maxlength="200" placeholder="Press Enter to chat!"/> </div>
 </font>
-		    <input type="text" id="chat_textbox" maxlength="200" placeholder="Press Enter to chat!"/> </div>
     <div id="connecting" style="position: absolute; left: 0; right: 0; top: 0; bottom: 0; z-index: 100">
         <div class="connecting-panel" style="width: 350px; background-color: #FFFFFF; margin: auto auto auto -175px; border-radius: 15px; padding: 5px 15px 5px 15px">
             <h2 data-itr="connecting"></h2>
             <p data-itr="connect_help"></p>
         </div><div>
-	    <div id="instructions"></div>
 	    <input type="text" id="chat_textbox" maxlength="200" placeholder="Press Enter to chat!"/> </div>
     </div><canvas id="canvas" width="800" height="600"></canvas>
 	
