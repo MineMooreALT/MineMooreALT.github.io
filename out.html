@@ -10,7 +10,7 @@
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:type" content="website">
-    <title>v72</title>
+    <title>Mine	Moore</title>
     <link id="favicon" rel="icon" type="image/png" href="favicon-32x32.png">
     <script type="text/javascript">
         window.isChrome = /chrome/.test(navigator.userAgent.toLowerCase())
@@ -10901,10 +10901,10 @@ inject();
         }
         
         .v72-panel {
-            width: 350px;
-            background-color: #FFF;
+            width: 390px;
+            background-color: #000000;
             margin: 2px;
-            border-radius: 10px;
+            border-radius: 5px;
             padding: 5px 15px;
             vertical-align: top
         }
@@ -17082,6 +17082,27 @@ button.close {
             height: 100px;
             display: table-row
         }
+	       #chat_textbox {
+        -webkit-transition: all .5s ease-in-out;
+        -moz-transition: all .5s ease-in-out;
+        -o-transition: all .5s ease-in-out;
+        transition: all .5s ease-in-out;
+        position: absolute;
+        z-index: 1;
+        bottom: 10px;
+        background: rgba(0, 0, 0, .2);
+        border: 0px;
+        outline: none;
+        color: #FFF;
+        height: 40px;
+        text-indent: 12px;
+        left: 10px;
+        width: 400px;
+    }
+
+    #chat_textbox:focus {
+        background: rgba(0, 0, 0, .5);
+    }
     </style>
     <script>
         i18n = {
@@ -19325,13 +19346,14 @@ button.close {
         <div class="gamepad_alert" id="controller_alert_disconnected" style="display:none">
             <div class="wrapper"><span class="controller_icon"> </span><span class="alert_text">Controller Disconnected</span></div>
         </div>
+	    <font color="white">
         <div id="helloContainer" data-logged-in="1">
             <div class="v72-panel" id="mainPanel">
                 <div role="form" novalidate="">
                     <div style="float: left; margin-left: 20px">
-                        <h2>v72</h2>
+                        <h2>MineMoore</h2>
                     </div>
-                    <div class="form-group clearfix"><input class="form-control" id="nick" placeholder="Nick" maxlength="15" autofocus="" style="width:100%"></div>
+                    <div class="form-group clearfix"><input class="form-control" id="nick" placeholder="Nick" maxlength="15" autofocus="" style="width:100%" value="MineMooreYT"></div>
                     <div class="form-group" id="v72-main-buttons">
                         <div class="row"><button class="btn btn-info btn-settings" type="button" onclick="toggleSettings(); return false;"><i class="glyphicon glyphicon-cog"></i></button><button class="btn btn-play btn-primary btn-needs-server" type="submit" onclick="setNick(document.getElementById('nick').value); return false;" data-itr="play"></button></div>
                     </div>
@@ -19365,8 +19387,10 @@ button.close {
         <div class="connecting-panel" style="width: 350px; background-color: #FFFFFF; margin: auto auto auto -175px; border-radius: 15px; padding: 5px 15px 5px 15px">
             <h2 data-itr="connecting"></h2>
             <p data-itr="connect_help"></p>
-        </div>
+        </div><div>
+	    <input type="text" id="chat_textbox" maxlength="200" placeholder="Press Enter to chat!"/> </div>
     </div><canvas id="canvas" width="800" height="600"></canvas>
+	
     <div style="font-family:'Ubuntu'"> </div>
     <script>
         $(function() {
@@ -19378,6 +19402,7 @@ button.close {
             })
         })
     </script>
+	    </font>
 </body>
 
 </html>
