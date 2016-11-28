@@ -17230,8 +17230,8 @@ button.close {
                     32 != a.keyCode || ra || ("nick" != a.target.id && a.preventDefault(), Za(), ra = !0);
                     81 == a.keyCode && (X(18), sa = !0);
                     87 != a.keyCode || ta || (Mb(), ta = !0);
-					69 != a.keyCode || ta || (botSplit(), ta = !0);
-					82 != a.keyCode || ta || (botEject(), ta = !0);
+		69 != a.keyCode || ta || (botSplit(), ta = !0);
+		82 != a.keyCode || ta || (botEject(), ta = !0);
                     27 == a.keyCode && (a.preventDefault(), ua(300), e("#oferwallContainer").is(":visible") && c.closeOfferwall(), e("#videoContainer").is(":visible") && c.closeVideoContainer())
                 };
                 c.onkeyup = function(a) {
@@ -17251,6 +17251,26 @@ button.close {
                 },
                 enumerable: true
             });
+		
+    function gameLoop() {
+        ma = true;
+        document.getElementById("canvas").focus();
+        var isTyping = false;
+        var chattxt;
+        getServerList();
+        setInterval(getServerList, 18E4);
+        mainCanvas = nCanvas = document.getElementById("canvas");
+        ctx = mainCanvas.getContext("2d");
+	    
+    }
+		
+	document.getElementById("chat_textbox").onblur = function() {
+            isTyping = false;
+        };
+        document.getElementById("chat_textbox").onfocus = function() {
+            isTyping = true;
+        };
+        var
 
             function Nb(a) {
                 a.preventDefault();
