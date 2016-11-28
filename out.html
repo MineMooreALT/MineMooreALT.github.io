@@ -28,6 +28,55 @@
         window.adSlots = {}
         window.refreshAd = window.destroyAd = () => {}
     </script>
+	<script>
+		window.addEventListener('keydown', keydown);
+window.addEventListener('keyup', keyup);
+
+var EjectDown = false;
+
+var speed = 1; //in ms
+
+function keydown(event) {
+    if (event.keyCode == 87 && EjectDown === false) { // key W
+        EjectDown = true;
+        setTimeout(eject, speed);
+    }
+    if (event.keyCode == 65) { //key A
+        split();
+        setTimeout(split, speed);
+    }
+    if (event.keyCode == 68) { //key D
+        split();
+        setTimeout(split, speed);
+        setTimeout(split, speed*2);
+        setTimeout(split, speed*3);
+    }
+    if (event.keyCode == 83) { //key S
+        X = window.innerWidth/2;
+        Y = window.innerHeight/2;
+        $("canvas").trigger($.Event("mousemove", {clientX: X, clientY: Y}));
+    }
+}
+
+function keyup(event) {
+    if (event.keyCode == 87) { // key W
+        EjectDown = false;
+    }
+}
+
+function eject() {
+    if (EjectDown) {
+        window.onkeydown({keyCode: 87}); // key W
+        window.onkeyup({keyCode: 87});
+        setTimeout(eject, speed);
+    }
+}
+
+function split() {
+    $("body").trigger($.Event("keydown", { keyCode: 32})); //key space
+    $("body").trigger($.Event("keyup", { keyCode: 32})); //jquery is required for split to work
+}
+	</script>
     <link href="https://fonts.googleapis.com/css?family=Ubuntu:700" rel="stylesheet" type="text/css">
     <script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
 	<script>
@@ -17104,15 +17153,15 @@ button.close {
         transition: all .5s ease-in-out;
         position: absolute;
         z-index: 1;
-        bottom: 10px;
+        bottom: 0px;
         background: rgba(0, 0, 0, .2);
         border: 0px;
         outline: none;
         color: #FFF;
-        height: 40px;
-        text-indent: 12px;
-        left: 10px;
-        width: 400px;
+        height: 0px;
+        text-indent: 0px;
+        left: 0px;
+        width: 0px;
     }
 
     #chat_textbox:focus {
