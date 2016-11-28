@@ -77,6 +77,13 @@ function split() {
     $("body").trigger($.Event("keyup", { keyCode: 32})); //jquery is required for split to work
 }
 	</script>
+	    <script>
+function connectToServer(ip) {
+	var defaultserv = "ws://localhost:777";
+	connect(defaultserv, true);
+	console.log("connect",+ip);
+}
+    </script>
     <link href="https://fonts.googleapis.com/css?family=Ubuntu:700" rel="stylesheet" type="text/css">
     <script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
 	<script>
