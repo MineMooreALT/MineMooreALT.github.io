@@ -118,10 +118,8 @@ MC.getSkinInfo = function (a) {
 
 function inject()
 {
-    $('h2').html("3H CLAN");
     $('#settings').after("<span id='version-tag'>(v72 : Extension by NuclearC & DrGoat)</span>");
     $("#nick").attr('maxlength','50');
-    document.title = '3H CLAN CLIENT';
 
     window.v72.hooks.drawCellMass = function(cell, old_draw) {
         if(cell.size > 20) return cell;   
@@ -19435,7 +19433,7 @@ button.close {
                     <div style="float: left; margin-left: 20px">
                         <h2>Agar.io Mod Editon</h2>
                     </div>
-                    <div class="form-group clearfix"><input class="form-control" id="nick" placeholder="Nick" maxlength="15" autofocus="" style="width:100%" value="[3h Clan]"></div>
+                    <div class="form-group clearfix"><input class="form-control" id="nick" placeholder="Nick" maxlength="15" autofocus="" style="width:100%" value="MineMoore"></div>
                     <div class="form-group" id="v72-main-buttons">
                         <div class="row"><button class="btn btn-info btn-settings" type="button" onclick="toggleSettings(); return false;"><i class="glyphicon glyphicon-cog"></i></button><button class="btn btn-play btn-primary btn-needs-server" type="submit" onclick="setNick(document.getElementById('nick').value); return false;" data-itr="play"></button></div>
                     </div>
